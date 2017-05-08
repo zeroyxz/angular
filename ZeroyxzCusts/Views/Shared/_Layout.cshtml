@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,12 @@
     @Styles.Render("~/Client/Stylesheets")
     @Scripts.Render("~/bundles/modernizr")
     <script src="~/Client/Scripts/Vendor/angular.min.js"></script>
-    <script src="~/Client/Scripts/App/app.js"></script>
+    <!--this is a bundle of the javascript files and the minified - uses VS Web Essentials
+    <script src="~/Client/Scripts/App/MyBundle.min.js"></script>
+    Can't use minified version because it gets rid of global angular names like $scope etc
+    Would need to use an Angular specific minifier -->
+
+    <script src="~/Client/Scripts/App/MyBundle.js"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -22,10 +27,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 @*<ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>*@
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>*@
             </div>
         </div>
     </div>

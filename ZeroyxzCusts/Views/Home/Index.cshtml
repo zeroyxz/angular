@@ -4,14 +4,13 @@
     ViewBag.Title = "Index";
 }
 
-<div ng-app='Customers' ng-controller='CustomersController'>
-       <!-- We can attach a click event even to a h element-->
-    <h4 ng-click="logIt({{ customers }}">Load Customers</h4>
-    <ul>
-        
-        <li ng-repeat="customer in customers track by customer.CustomerId">
+<!--Note the CustomersController as customers - best practice/more readable -->
+<div class="container" ng-app='Customers' ng-controller='CustomersController as customers'>  
+    <div class="row">
+
+        <div class="col-md-6" ng-repeat="customer in customers track by customer.CustomerId">
             @*
-                *******THIS WORKS FINE*******
+                *******This works fine - repeating HTML in an ng-repeat *******
                 <div><p id="name">Name:{{ customer.Name }}</p>
                 <p id="address">Address:{{ customer.Address }},{{ customer.City }}, {{ customer.County }}, {{ customer.PostCode }}</p>
                 <p id="email">Email:{{ customer.Email }}</p>
@@ -20,15 +19,16 @@
             *@
 
             @*
-                *******THIS WORKS FINE*******
+                *******This is better - putting the HTML in a template file*******
                 Using ng-include and a child view in an html file
                 <div ng-include="'/Client/Views/CustomerView.html'"></div>
             *@
 
-            <directive list="dummy" title="dummy"></directive>
-            
-        </li>
-    </ul>
+            @*This is very good - using a directive - more flexibility (attributes, CSS, HTML etc)*@
+            <directive></directive>
+
+        </div>
+    </div>
 </div>
 
 @*<form id="addCustomer">

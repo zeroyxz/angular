@@ -144,20 +144,53 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Client\Views\CustomerView.html" />
+    <Content Include="Client\Scripts\App\Customers\CustomersController.js" />
+    <Content Include="Client\Scripts\App\Customers\CustomersDirective.js" />
+    <Content Include="Client\Scripts\App\MyBundle.js">
+      <DependentUpon>MyBundle.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="Client\Scripts\App\MyBundle.min.js">
+      <DependentUpon>MyBundle.js</DependentUpon>
+    </Content>
+    <Content Include="Client\Stylesheets\site.css">
+      <DependentUpon>site.less</DependentUpon>
+    </Content>
+    <Content Include="Client\Stylesheets\site.min.css">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
+    <Content Include="Client\Views\Customer.tpl.html" />
     <Content Include="Client\Stylesheets\bootstrap.css" />
     <Content Include="Client\Stylesheets\bootstrap.min.css" />
     <Content Include="Client\Stylesheets\Customers.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Client\Stylesheets\Site.css" />
     <Content Include="Client\Scripts\Vendor\angular-mocks.js" />
     <Content Include="Client\Scripts\Vendor\angular.js" />
     <Content Include="Client\Scripts\Vendor\angular.min.js" />
-    <Content Include="Client\Scripts\App\app.js" />
+    <Content Include="Client\Scripts\App\Module\app.js" />
     <Content Include="Client\Scripts\Vendor\bootstrap.js" />
     <Content Include="Client\Scripts\Vendor\bootstrap.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Client\Stylesheets\site.less" />
+    <Content Include="Client\Stylesheets\site.css.map">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
+    <Content Include="Client\Scripts\App\MyBundle.js.bundle" />
+    <Content Include="Client\Scripts\App\MyBundle.min.js.map">
+      <DependentUpon>MyBundle.min.js</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\ZeroyxzCusts - Web Deploy.pubxml" />
     <Content Include="Client\Scripts\Vendor\angular.min.js.map" />
     <None Include="Client\Scripts\Vendor\jquery-1.10.2.intellisense.js" />
@@ -174,6 +207,14 @@
     <Content Include="Client\Scripts\Vendor\respond.js" />
     <Content Include="Client\Scripts\Vendor\respond.min.js" />
     <Content Include="Client\Scripts\_references.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -195,6 +236,8 @@
     <Content Include="Views\Home\Edit.cshtml" />
     <Content Include="Views\Home\Index - Copy.cshtml" />
     <Content Include="Views\Home\Index-knockout.cshtml" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -203,9 +246,6 @@
     <Folder Include="Client\Scripts\App\Directives\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
